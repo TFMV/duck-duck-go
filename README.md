@@ -1,6 +1,18 @@
 # DuckDB Go Bindings Example
 
-This project demonstrates how to use the DuckDB Go bindings to interact with DuckDB databases from Go applications. It provides a simple interactive CLI that showcases basic DuckDB operations including creating tables, executing queries, using prepared statements, and exporting data.
+🚧 Warning: The DuckDB Go bindings are in early development. 🚧
+
+Expect potential API changes and missing functionality.
+
+This project demonstrates how to use the DuckDB Go bindings to interact with DuckDB databases from Go applications.
+It provides a simple interactive CLI showcasing:
+
+✅ Creating an in-memory DuckDB database
+✅ Executing SQL queries
+✅ Using prepared statements
+✅ Retrieving query results
+✅ Appending data to tables
+✅ Exporting data to CSV files
 
 ## Overview
 
@@ -58,24 +70,24 @@ import (
 
 Key components:
 
-- **Database Creation**: Creates an in-memory DuckDB database
-- **Query Execution**: Demonstrates how to execute SQL queries
-- **Prepared Statements**: Shows how to use prepared statements with parameters
-- **Result Processing**: Retrieves and displays query results
-- **Data Export**: Exports table data to CSV format
+- Database Creation → Creates an in-memory DuckDB instance
+- Query Execution → Executes SQL queries directly
+- Prepared Statements → Uses parameterized SQL for safe queries
+- Result Processing → Retrieves query results
+- Data Export → Saves tables as CSV
 
 ## Limitations
 
-This is an experimental implementation with some limitations:
+🚨 This is an early-stage implementation with limitations:
 
-- The value retrieval functions are not fully implemented, so actual data values are displayed as placeholders
-- The advanced example option is not yet implemented
-- Error handling could be more robust
-- Platform-specific (currently only works on macOS with ARM64 architecture)
+❌ Limited data retrieval – Values are placeholders, as full data retrieval functions aren’t implemented
+❌ Basic error handling – Some edge cases may not be handled gracefully
+❌ No Appending - Appends have not been implemented.
 
 ## Future Improvements
 
 - Implement value retrieval functions to display actual data
+- Appender Functionality
 - Add the advanced example functionality
 - Improve error handling
 - Add support for additional platforms
