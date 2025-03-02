@@ -148,7 +148,6 @@ func runBasicExample() {
 	}
 	fmt.Println("]")
 
-	// Print result rows (assuming one data chunk)
 	fmt.Println("Results:")
 	rc := rowCount(&result)
 	for r := bindings.IdxT(0); r < rc; r++ {
@@ -201,11 +200,12 @@ func runBasicExample() {
 	// Append a new row
 	// Note: The actual appender functions for specific data types are not defined in the bindings
 	fmt.Println("  Note: Appending functionality commented out due to missing bindings")
+
 	/*
-		if state := bindings.AppendInt32(appender, 4); state != bindings.StateSuccess {
+		if state := bindings.AppendDataChunk(appender, 4); state != bindings.StateSuccess {
 			log.Fatalf("Failed to append integer: %v", state)
 		}
-		if state := bindings.AppendString(appender, "Dave"); state != bindings.StateSuccess {
+		if state := bindings.AppendDataChunk(appender, "Dave"); state != bindings.StateSuccess {
 			log.Fatalf("Failed to append string: %v", state)
 		}
 	*/
