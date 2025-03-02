@@ -7,12 +7,12 @@ Expect potential API changes and missing functionality.
 This project demonstrates how to use the DuckDB Go bindings to interact with DuckDB databases from Go applications.
 It provides a simple interactive CLI showcasing:
 
-✅ Creating an in-memory DuckDB database
-✅ Executing SQL queries
-✅ Using prepared statements
-✅ Retrieving query results
-✅ Appending data to tables
-✅ Exporting data to CSV files
+- Creating an in-memory DuckDB database
+- Executing SQL queries
+- Using prepared statements
+- Retrieving query results
+- Appending data to tables
+- Exporting data to CSV files
 
 ## Overview
 
@@ -80,9 +80,9 @@ Key components:
 
 🚨 This is an early-stage implementation with limitations:
 
-❌ Limited data retrieval – Values are placeholders, as full data retrieval functions aren’t implemented
-❌ Basic error handling – Some edge cases may not be handled gracefully
-❌ No Appending - Appends have not been implemented.
+- Limited data retrieval – Values are placeholders, as full data retrieval functions aren’t implemented
+- Basic error handling – Some edge cases may not be handled gracefully
+- No Appending - Appends have not been implemented.
 
 ## Future Improvements
 
