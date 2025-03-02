@@ -31,17 +31,9 @@ func rowCount(result *bindings.Result) bindings.IdxT {
 	return bindings.DataChunkGetSize(chunk)
 }
 
-// For demonstration purposes we assume that the bindings package provides wrappers for
-// value retrieval. If they do not exist, you would need to implement them (e.g.,
-// using duckdb_value_int64 for integers and duckdb_get_varchar for strings).
-// Here we assume the following functions exist:
-//   bindings.ValueInt32(result *bindings.Result, col, row bindings.IdxT) int32
-//   bindings.ValueString(result *bindings.Result, col, row bindings.IdxT) string
-
 func main() {
 	fmt.Println("DuckDB Go Bindings Experimental Examples")
 	fmt.Println("========================================")
-	fmt.Printf("DuckDB version: %s\n\n", "0.9.2") // Placeholder for version
 
 	reader := bufio.NewReader(os.Stdin)
 	for {
@@ -55,7 +47,7 @@ func main() {
 
 		switch choice {
 		case "1":
-			runBasicExample(reader)
+			runBasicExample()
 		case "q", "Q", "quit", "exit":
 			fmt.Println("Exiting...")
 			return
@@ -69,7 +61,7 @@ func main() {
 	}
 }
 
-func runBasicExample(reader *bufio.Reader) {
+func runBasicExample() {
 	fmt.Println("\n=== Basic DuckDB Example ===")
 
 	// Create a new in-memory database
@@ -208,7 +200,6 @@ func runBasicExample(reader *bufio.Reader) {
 
 	// Append a new row
 	// Note: The actual appender functions for specific data types are not defined in the bindings
-	// You'll need to find the correct functions or implement them
 	fmt.Println("  Note: Appending functionality commented out due to missing bindings")
 	/*
 		if state := bindings.AppendInt32(appender, 4); state != bindings.StateSuccess {
